@@ -166,128 +166,129 @@
   </style>
 </head>
 <body>
-  <nav>
-    <h1>
-      <!-- Updated Image Source -->
-      <img src="Websizelogo_Google AI Studio.png" alt="Mashiach Squared">
-    </h1>
-    <ul>
-      <li><a href="#about">About</a></li>
-      <li><a href="#offerings">Offerings</a></li>
-      <li><a href="#shop">Digital Temple</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-  </nav>
+<nav>
+  <h1>
+    <!-- Updated Image Source -->
+    <img src="Websizelogo_Google AI Studio.png" alt="Mashiach Squared">
+  </h1>
+  <ul>
+    <li><a href="#about">About</a></li>
+    <li><a href="#offerings">Offerings</a></li>
+    <li><a href="#shop">Digital Temple</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
 
-  <section class="hero">
-    <h2>Awaken Your Higher Self</h2>
-    <p>Through sacred design, innovative coding, and metaphysical mastery. Welcome to the Kingdom within.</p>
-    <div>
-      <button class="primary-btn" onclick="document.getElementById('offerings').scrollIntoView({behavior: 'smooth'});">Book a Session</button>
-      <button class="outline-btn">Free Affirmations</button>
-    </div>
-  </section>
+<section class="hero">
+  <h2>Awaken Your Higher Self</h2>
+  <p>Through sacred design, innovative coding, and metaphysical mastery. Welcome to the Kingdom within.</p>
+  <div>
+    <button class="primary-btn" onclick="document.getElementById('offerings').scrollIntoView({behavior: 'smooth'});">Book a Session</button>
+    <button class="outline-btn">Free Affirmations</button>
+  </div>
+</section>
 
-  <section id="about">
-    <h3>You're the Light!!</h3>
-    <p>I Am Beloved — UX/UI designer, vibe-coder, Mixed Martial Arts Student & Practitioner, Spoken-Word Artist and founder of Ben-David Torah. My mission is to restore the Kingdom of God within us through divine creativity, metaphysical mastery, and digital consciousness.</p>
-  </section>
+<section id="about">
+  <h3>You're the Light!!</h3>
+  <p>I Am Beloved — UX/UI designer, vibe-coder, Mixed Martial Arts Student & Practitioner, Spoken-Word Artist and founder of Ben-David Torah. My mission is to restore the Kingdom of God within us through divine creativity, metaphysical mastery, and digital consciousness.</p>
+</section>
 
-  <section id="offerings">
-    <h3>Offerings</h3>
-    <div style="display:flex; flex-wrap:wrap; justify-content:center;">
-      
-      <!-- Card 1: Coaching -->
-      <div class="card">
-        <div>
-          <h4>Spiritual Coaching</h4>
-          <p>1-on-1 divine sessions</p>
-          <strong>$111.00</strong>
-        </div>
-        <div id="paypal-container-coaching" class="paypal-btn-wrapper"></div>
+<section id="offerings">
+  <h3>Offerings</h3>
+  <div style="display:flex; flex-wrap:wrap; justify-content:center;">
+
+    <!-- Card 1: Coaching -->
+    <div class="card">
+      <div>
+        <h4>Spiritual Coaching</h4>
+        <p>1-on-1 divine sessions</p>
+        <strong>$111.00</strong>
       </div>
-
-      <!-- Card 2: Custom Tech -->
-      <div class="card">
-        <div>
-          <h4>Custom Tech</h4>
-          <p>AI tools for consciousness</p>
-          <strong>$500.00</strong>
-        </div>
-        <div id="paypal-container-tech" class="paypal-btn-wrapper"></div>
-      </div>
-
-      <!-- Card 3: Design -->
-      <div class="card">
-        <div>
-          <h4>Prophetic Design</h4>
-          <p>Sacred branding packs</p>
-          <strong>$150.00</strong>
-        </div>
-        <div id="paypal-container-design" class="paypal-btn-wrapper"></div>
-      </div>
-
+      <div id="paypal-container-coaching" class="paypal-btn-wrapper"></div>
     </div>
-  </section>
 
-  <section id="shop" class="temple">
-    <h3>Digital Temple</h3>
-    <p>Experience tools and teachings for spiritual alignment</p>
-    <button class="primary-btn">Explore Now</button>
-  </section>
-
-  <footer id="contact">
-    <p>© 2025 Mashiach²</p>
-    <div>
-      <a href="#">Instagram</a>
-      <a href="#">YouTube</a>
-      <a href="#">TikTok</a>
+    <!-- Card 2: Custom Tech -->
+    <div class="card">
+      <div>
+        <h4>Custom Tech</h4>
+        <p>AI tools for consciousness</p>
+        <strong>$500.00</strong>
+      </div>
+      <div id="paypal-container-tech" class="paypal-btn-wrapper"></div>
     </div>
-  </footer>
 
-  <!-- PayPal SDK: REPLACE 'YOUR_PAYPAL_CLIENT_ID' with your actual Client ID -->
-  <script src="https://www.paypal.com/sdk/js?client-id=YOUR_PAYPAL_CLIENT_ID&currency=USD"></script>
-  
-  <script>
-    /**
-     * Renders a PayPal button into a specific container
-     */
-    function renderPayPalButton(containerId, amount, description) {
-      paypal.Buttons({
-        style: {
-          shape: 'pill',
-          color: 'gold',
-          layout: 'vertical',
-          label: 'pay',
-          height: 40
-        },
-        createOrder: (data, actions) => {
-          return actions.order.create({
-            purchase_units: [{
-              amount: { value: amount },
-              description: description
-            }],
-          });
-        },
-        onApprove: (data, actions) => {
-          return actions.order.capture().then((details) => {
-            const payerName = details.payer.name.given_name;
-            alert(`Success! Transaction completed by ${payerName}. We will contact you shortly to schedule.`);
-          });
-        },
-        onError: (err) => {
-          console.error('PayPal Checkout Error:', err);
-          alert('An error occurred during the transaction. Please try again.');
-        },
-      }).render('#' + containerId);
-    }
+    <!-- Card 3: Design -->
+    <div class="card">
+      <div>
+        <h4>Prophetic Design</h4>
+        <p>Sacred branding packs</p>
+        <strong>$150.00</strong>
+      </div>
+      <div id="paypal-container-design" class="paypal-btn-wrapper"></div>
+    </div>
 
-    // Initialize buttons when DOM is ready
-    document.addEventListener('DOMContentLoaded', () => {
-      renderPayPalButton('paypal-container-coaching', '111.00', '1-on-1 Divine Session');
-      renderPayPalButton('paypal-container-tech', '500.00', 'AI Tools for Consciousness');
-      renderPayPalButton('paypal-container-design', '150.00', 'Sacred Branding Pack');
-    });
-  </script>
+  </div>
+</section>
+
+<section id="shop" class="temple">
+  <h3>Digital Temple</h3>
+  <p>Experience tools and teachings for spiritual alignment</p>
+  <button class="primary-btn">Explore Now</button>
+</section>
+
+<footer id="contact">
+  <p>© 2025 Mashiach²</p>
+  <div>
+    <!-- ==== MODIFIED SECTION ==== -->
+    <a href="https://github.com/DJD1980">GitHub</a>
+    <a href="https://www.behance.net/gallery/239181603/Mashiach-Squared">Behance</a>
+  </div>
+</footer>
+
+
+<!-- PayPal SDK: REPLACE 'YOUR_PAYPAL_CLIENT_ID' with your actual Client ID -->
+<script src="https://www.paypal.com/sdk/js?client-id=Ae1nkU-fRCpL9UtmhMm7PyiPK-ShTaHF8-r04SD3r6Gqz5bdmTwJfHkLDFGpVNzbhArNM1H8QEp8yGNc&currency=USD"></script>
+
+<script>
+  /**
+   * Renders a PayPal button into a specific container
+   */
+  function renderPayPalButton(containerId, amount, description) {
+    paypal.Buttons({
+      style: {
+        shape: 'pill',
+        color: 'gold',
+        layout: 'vertical',
+        label: 'pay',
+        height: 40
+      },
+      createOrder: (data, actions) => {
+        return actions.order.create({
+          purchase_units: [{
+            amount: { value: amount },
+            description: description
+          }],
+        });
+      },
+      onApprove: (data, actions) => {
+        return actions.order.capture().then((details) => {
+          const payerName = details.payer.name.given_name;
+          alert(`Success! Transaction completed by ${payerName}. We will contact you shortly to schedule.`);
+        });
+      },
+      onError: (err) => {
+        console.error('PayPal Checkout Error:', err);
+        alert('An error occurred during the transaction. Please try again.');
+      },
+    }).render('#' + containerId);
+  }
+
+  // Initialize buttons when DOM is ready
+  document.addEventListener('DOMContentLoaded', () => {
+    renderPayPalButton('paypal-container-coaching', '111.00', '1-on-1 Divine Session');
+    renderPayPalButton('paypal-container-tech', '500.00', 'AI Tools for Consciousness');
+    renderPayPalButton('paypal-container-design', '150.00', 'Sacred Branding Pack');
+  });
+</script>
 </body>
 </html>
