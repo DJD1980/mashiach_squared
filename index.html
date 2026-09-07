@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mashiach Squared | Multidisciplinary Software & Solutions</title>
+  <style>
+    :root {
+      --royal-blue: #1A365D;
+      --deep-purple: #4A1D6A;
+      --gold: #D4AF37;
+      --gold-light: #F3E5AB;
+      --white: #FFFFFF;
+      --bg-dark: #0B0E14;
+      --card-bg: rgba(26, 54, 93, 0.25);
+      --card-border: rgba(212, 175, 55, 0.2);
+      --text-muted: #E2E8F0;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    }
+
+    body {
+      background-color: var(--bg-dark);
+      color: var(--white);
+      line-height: 1.6;
+    }
+
+    header {
+      padding: 5rem 1.5rem 4rem;
+      text-align: center;
+      background: radial-gradient(circle at top, var(--deep-purple) 0%, var(--royal-blue) 50%, var(--bg-dark) 100%);
+      border-bottom: 1px solid var(--card-border);
+    }
+
+    h1 {
+      font-size: 2.75rem;
+      color: var(--white);
+      letter-spacing: -0.02em;
+      margin-bottom: 1rem;
+    }
+
+    h1 span {
+      color: var(--gold);
+    }
+
+    h2 {
+      font-size: 1.85rem;
+      color: var(--gold);
+      text-align: center;
+      margin-bottom: 2.5rem;
+      letter-spacing: -0.01em;
+    }
+
+    .hero-lead {
+      max-width: 760px;
+      margin: 0 auto 2rem;
+      font-size: 1.15rem;
+      color: var(--text-muted);
+    }
+
+    .cta-group {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .btn-gold {
+      background: var(--gold);
+      color: #000;
+      font-weight: 600;
+      padding: 0.85rem 1.75rem;
+      border-radius: 6px;
+      text-decoration: none;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .btn-gold:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 14px rgba(212, 175, 55, 0.4);
+    }
+
+    .btn-outline {
+      border: 1px solid var(--gold);
+      color: var(--gold-light);
+      padding: 0.85rem 1.75rem;
+      border-radius: 6px;
+      text-decoration: none;
+      transition: background 0.2s ease;
+    }
+
+    .btn-outline:hover {
+      background: rgba(212, 175, 55, 0.1);
+    }
+
+    main {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 4rem 1.5rem;
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 1.75rem;
+      margin-bottom: 5rem;
+    }
+
+    .card {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 8px;
+      padding: 2rem;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .card::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 3px;
+      background: linear-gradient(90deg, var(--royal-blue), var(--deep-purple), var(--gold));
+    }
+
+    .card h3 {
+      color: var(--gold-light);
+      font-size: 1.25rem;
+      margin-bottom: 0.75rem;
+    }
+
+    .card p {
+      color: var(--text-muted);
+      font-size: 0.95rem;
+      margin-bottom: 1rem;
+    }
+
+    .card p:last-child {
+      margin-bottom: 0;
+    }
+
+    .card-label {
+      font-weight: 600;
+      color: var(--white);
+    }
+
+    .contact-section {
+      text-align: center;
+      padding: 4rem 2rem;
+      background: linear-gradient(135deg, rgba(74, 29, 106, 0.4), rgba(26, 54, 93, 0.4));
+      border: 1px solid var(--card-border);
+      border-radius: 12px;
+    }
+
+    .contact-section p {
+      max-width: 600px;
+      margin: 0 auto 1.5rem;
+      color: var(--text-muted);
+    }
+
+    .contact-details {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      flex-wrap: wrap;
+      margin-top: 1.5rem;
+    }
+
+    .contact-link {
+      color: var(--gold);
+      text-decoration: none;
+      font-weight: 500;
+      border-bottom: 1px dashed var(--gold);
+      padding-bottom: 2px;
+    }
+
+    .contact-link:hover {
+      color: var(--gold-light);
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem;
+      border-top: 1px solid rgba(255, 255, 255, 0.05);
+      font-size: 0.85rem;
+      color: rgba(255, 255, 255, 0.4);
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Welcome to <span>Mashiach Squared</span></h1>
+    <p class="hero-lead">
+      Multidisciplinary software engineering combining technical precision, specialization across cloud infrastructure, high-performance systems, and conscious digital tools.
+    </p>
+    <div class="cta-group">
+      <a href="mailto:info@mashiachsquared.com" class="btn-gold">Initiate Project</a>
+    </div>
+  </header>
+
+  <main>
+    <h2>Capabilities &amp; Specialized Services</h2>
+    <div class="services-grid">
+
+      <div class="card">
+        <h3>Google Ecosystem &amp; Intelligent Apps</h3>
+        <p><span class="card-label">Cloud Automations:</span> Google Workspace solutions, Google Apps Script pipelines, AppSheet business systems, and GCP serverless backends.</p>
+        <p><span class="card-label">Agentic AI:</span> Intelligent agent development and workflow integrations driven by Google Gemini API.</p>
+      </div>
+
+      <div class="card">
+        <h3>FinTech &amp; Digital Commerce</h3>
+        <p><span class="card-label">Financial Engineering:</span> Reliable transactional pipelines, multi-gateway payment architectures, and double-entry ledger integrity.</p>
+        <p><span class="card-label">Analytics &amp; Web3:</span> Data-informed financial intelligence dashboards, predictive telemetry, and decentralized asset tooling.</p>
+      </div>
+
+      <div class="card">
+        <h3>Sacred Technology &amp; Metaphysics</h3>
+        <p><span class="card-label">Esoteric Systems:</span> Custom digital Gematria engines, interactive Kabbalistic mapping architectures (Tree of Life &amp; Sefirot), and sacred geometry modules.</p>
+        <p><span class="card-label">Chronobiology:</span> Platforms aligning sacred timing, philosophical frameworks, and intentional personal growth.</p>
+      </div>
+
+      <div class="card">
+        <h3>Combat Sports &amp; Human Telemetry</h3>
+        <p><span class="card-label">Camp Analytics:</span> Periodization tracking for fight camps, sparring output metrics, and grappling telemetry.</p>
+        <p><span class="card-label">Readiness Systems:</span> Weight manipulation monitoring, injury prevention indicators, and metabolic recovery engines.</p>
+      </div>
+
+      <div class="card">
+        <h3>Mindfulness &amp; Neural Regulation</h3>
+        <p><span class="card-label">Somatic Tools:</span> Interactive pacing engines for guided breathwork, somatic check-in frameworks, and neural calming interfaces.</p>
+        <p><span class="card-label">Cognitive Health:</span> Structured digital journaling platforms and state-of-mind telemetry engineered for empathy and focus.</p>
+      </div>
+
+      <div class="card">
+        <h3>Audio Engineering &amp; Sound Tech</h3>
+        <p><span class="card-label">Synthesis &amp; Tuning:</span> Web Audio API sound engines, resonance tools, and exact-frequency generation apps.</p>
+        <p><span class="card-label">Creative Delivery:</span> Modern portfolio distribution software and Web3 media playback workflows.</p>
+      </div>
+
+    </div>
+
+    <section class="contact-section">
+      <h2>Let's Build Something Meaningful</h2>
+      <p>
+        Whether you require high-level workflow automation, enterprise application design, or custom technology aligned with human performance and sacred disciplines, let's connect.
+      </p>
+      <div class="contact-details">
+        <a href="mailto:info@mashiachsquared.com" class="contact-link">info@mashiachsquared.com</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Mashiach Squared. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
